@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrandPilot AI — Amber Liu</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <div class="navin">
+          <div class="brand">
+            <div class="mark">B</div>
+            BrandPilot AI
+          </div>
+          <div class="navmeta">
+            <span class="live"></span><span>Public prototype · no login required</span>
+          </div>
+        </div>
+      </nav>
+      <main class="shell">
+        <section class="hero">
+          <div>
+            <span class="eyebrow">AI Marketing Workflow Prototype</span>
+            <h1>From brief to campaign, in one flow.</h1>
+            <p>把零散营销需求拆成受众假设、核心创意、平台内容、7 日排期与衡量框架，让策略、内容和数据在同一条工作流里衔接。</p>
+          </div>
+          <aside class="heroaside">
+            <div class="big">A practical AI-assisted marketing workflow built around real content strategy logic.</div>
+            <div class="chips">
+              <span class="chip">Brief → Insight</span><span class="chip">Strategy → Content</span><span class="chip">KPI → Experiment</span>
+            </div>
+          </aside>
+        </section>
+        <section class="grid">
+          <div class="card panel">
+            <div class="paneltop">
+              <div><h2>Campaign Brief</h2><div class="small">输入真实项目，也可以先跑预设案例</div></div>
+              <span class="status" id="engineBadge">Ready</span>
+            </div>
+            <div class="sectionlabel">Quick presets</div>
+            <div class="presets">
+              <button class="preset" data-preset="hotel">Luxury Hospitality</button>
+              <button class="preset" data-preset="homemuse">HomeMuse</button>
+              <button class="preset" data-preset="culture">Culture / Performance</button>
+            </div>
+            <label for="brand">品牌 / 项目 *</label>
+            <input id="brand" value="HomeMuse" placeholder="e.g. HomeMuse" />
+            <div class="row2">
+              <div><label for="category">行业</label><select id="category"><option>生活方式 / 家居</option><option>美妆护肤</option><option>高端酒店 / 旅行</option><option>食品饮料</option><option>文化 / 演艺</option><option>消费科技</option><option>其他</option></select></div>
+              <div><label for="objective">营销目标 *</label><select id="objective"><option>新品 / 活动认知</option><option>互动与种草</option><option selected>转化与销售</option><option>用户增长</option><option>品牌心智</option></select></div>
+            </div>
+            <label for="audience">目标受众 *</label>
+            <input id="audience" value="18–28 岁、在墨尔本租房或留学的年轻消费者" placeholder="谁是最核心的人？" />
+            <label for="usp">核心产品 / 卖点</label>
+            <textarea id="usp">开学季生活场景的一站式家居小物与小电器，简洁、实用、适合租房生活</textarea>
+            <div class="row2">
+              <div><label for="platform">主平台</label><select id="platform"><option>小红书</option><option>抖音</option><option>微信公众号</option><option>Instagram</option><option>多平台</option></select></div>
+              <div><label for="tone">品牌语气</label><select id="tone"><option>轻松生活方式</option><option>高级克制</option><option>年轻有梗</option><option>温暖真诚</option><option>直接高效</option></select></div>
+            </div>
+            <label for="constraints">限制条件 / 必须包含</label>
+            <textarea id="constraints" placeholder="e.g. 不用夸张数据；预算有限；3 周内验证">预算有限，希望先用内容验证需求；避免空泛品牌话术</textarea>
+            <button class="primary" id="generate"><span>✦</span><span>生成营销方案</span></button>
+            <div class="small helper">优先调用 AI 生成完整方案；服务异常时会自动切换至 Structured Demo Engine，确保公开链接始终可测试。</div>
+          </div>
+          <div class="card result">
+            <div class="resulthead">
+              <div><h2>Strategy Output</h2><div class="small">生成后可换策略角度、复制全文或导出 Markdown</div></div>
+              <div class="actions"><button class="ghost" id="alt" disabled>换一个角度</button><button class="ghost" id="copy" disabled>复制全部</button><button class="ghost" id="download" disabled>导出 .md</button></div>
+            </div>
+            <div class="empty" id="empty"><div><div class="emptyicon">✦</div><div class="emptytitle">Your campaign system will appear here</div><div class="small emptycopy">输出会按照 Brief → Insight → Idea → Platform → Calendar → KPI 的路径组织。</div></div></div>
+            <div class="output" id="output"></div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="card aboutcard">
+            <div class="sectionlabel first">About this project</div>
+            <h3>Built by Amber Liu</h3>
+            <p class="small aboutcopy">Creative Communications / Media & Communications background. Focused on brand storytelling, social content, campaign planning and AI workflow design.</p>
+            <div class="profileline"><span class="profiletag">Brand Marketing</span><span class="profiletag">Content Strategy</span><span class="profiletag">Social Media</span><span class="profiletag">AI Workflow</span></div>
+          </div>
+          <div class="card aboutcard">
+            <div class="sectionlabel first">Method behind the prototype</div>
+            <h3>Data → Content → Insight → Action</h3>
+            <p class="small aboutcopy">The logic is adapted from real campaign and social-media work: separate reach, engagement, growth and context, then convert observations into content decisions and experiments.</p>
+            <div class="methods"><div class="method"><strong>Reach</strong><span>是否触达目标用户</span></div><div class="method"><strong>Engagement</strong><span>是否产生真实兴趣</span></div><div class="method"><strong>Growth</strong><span>是否带来进一步关注</span></div><div class="method"><strong>Context</strong><span>主题 / 视觉 / 时机如何影响表现</span></div></div>
+          </div>
+        </section>
+        <footer><span>BrandPilot AI · Public recruitment demo</span><span>Designed & built by Amber Liu · 2026</span></footer>
+      </main>
+      <div class="toast" id="toast">Copied</div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
